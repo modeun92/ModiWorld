@@ -7,6 +7,10 @@ This is the portfolio project where I will utilize algorithm, data structure, te
 ## What Skills I will use here
 - Color Mapping
 - Projection Matrix
+- Multi Threading
+- Single/Multi Mode
+- Camera Calibration
+- Github Runner/Action
 ## What Data Structures I use here
 - Circular Stack
 - Vector

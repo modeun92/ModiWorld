@@ -24,3 +24,6 @@ This is the portfolio project where I will utilize algorithm, data structure, te
 - Object Pooling
 - Singleton
 - Event
+## What kind of Github functions I use here
+- Self-hosted Runner
+- Actions

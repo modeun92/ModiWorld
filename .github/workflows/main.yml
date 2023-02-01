@@ -9,8 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Run a one-line script
-      run: echo "Hello, Modi World!"
+    - name: Run MSBuild
+      run: msbuild .\MFCApplication1\MFCApplication1.sln
       
-    - name: Get directory info and see what it has
-      run: ls
+    - name: Run Google Test
+      run: .\MFCApplication1\x64\Release\MyGoogleTest1.exe --gtest_output=json:MyTestResult001.json

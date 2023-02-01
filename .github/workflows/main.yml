@@ -12,7 +12,5 @@ jobs:
     - name: Run a one-line script
       run: echo "Hello, Modi World!"
       
-    - name: Run a multi-line script
-      run: |
-        echo "Add other actions to build"
-        echo "test, and deploy your project."
+    - name: Get directory info and see what it has
+      run: ls

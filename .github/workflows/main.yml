@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Run MSBuild
-      run: 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe' .\MFCApplication1\MFCApplication1.sln
+      run: .'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe' .\MFCApplication1\MFCApplication1.sln
       
     - name: Run Google Test
       run: .\MFCApplication1\x64\Release\MyGoogleTest1.exe --gtest_output=json:MyTestResult001.json

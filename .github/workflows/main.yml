@@ -11,6 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Check Path
+      run: echo $env:PATH
+      
     - name: Run MSBuild
       shell: pwsh
       run: msbuild .\MFCApplication1\MFCApplication1.sln

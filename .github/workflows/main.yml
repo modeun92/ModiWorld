@@ -5,35 +5,12 @@ jobs:
   myBuild:
 
     runs-on: windows-latest
-    env:
-      PATH: "${env:PATH};C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin"
       
     steps:
-    - name: Setup Git
-      uses: actions/setup-git@v2
-      with:
-        git-version: 2.x
-        
-    - name: Setup MSBuild
-      uses: actions/setup-msbuild@v1
-      with:
-        msbuild-version: 16.9
-        
-    - name: Git Checking
-      run: git --version
-    
-    - name: Add Git to PATH
-      shell: pwsh
-      run: echo "::add-path::$(Get-Command git.exe | Select-Object -ExpandProperty Path)"
-      
     - uses: actions/checkout@v2
       
     - name: Check Path
-      run: echo $env:PATH
-      
-    - name: Run MSBuild
-      shell: pwsh
-      run: msbuild .\MFCApplication1\MFCApplication1.sln
+      run: echo PATH
       
     - name: Run Google Test
       run: .\MFCApplication1\x64\Release\MyGoogleTest1.exe --gtest_output=xml:MyTestResult001.xml

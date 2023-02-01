@@ -14,7 +14,7 @@ jobs:
     - name: msbuild version check
       run: msbuild --version
     - name: run msbuild
-      run: msbuild .\MFCApplication1\MFCApplication1.sln
+      run: msbuild .\MFCApplication1\MFCApplication1.sln /property:Configuration=Release /property:Platform=x64
       
     - name: run google test
       run: .\MFCApplication1\x64\Release\MyGoogleTest1.exe --gtest_output=xml:C:\\Users\\Modi\\MyTestResult001.xml

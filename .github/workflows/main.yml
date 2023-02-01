@@ -1,7 +1,8 @@
 name: Modi_Workflow_1
 
 on: [ push, pull_request ]
-
+env:
+  PATH: "${env:PATH};C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin"
 jobs:
   myBuild:
     runs-on: windows-latest

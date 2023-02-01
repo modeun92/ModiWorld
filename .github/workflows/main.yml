@@ -9,6 +9,16 @@ jobs:
       PATH: "${env:PATH};C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin"
       
     steps:
+    - name: Setup Git
+      uses: actions/setup-git@v2
+      with:
+        git-version: 2.x
+        
+    - name: Setup MSBuild
+      uses: actions/setup-msbuild@v1
+      with:
+        msbuild-version: 16.9
+        
     - name: Git Checking
       run: git --version
     

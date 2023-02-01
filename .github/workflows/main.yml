@@ -13,3 +13,8 @@ jobs:
     
     - name: msbuild version check
       run: msbuild --version
+    - name: run msbuild
+      run: msbuild .\MFCApplication1\MFCApplication1.sln
+      
+    - name: run google test
+      run: .\MFCApplication1\x64\Release\MyGoogleTest1.exe --gtest_output=xml:MyTestResult001.xml

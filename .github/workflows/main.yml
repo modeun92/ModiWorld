@@ -17,4 +17,4 @@ jobs:
       run: msbuild .\MFCApplication1\MFCApplication1.sln
       
     - name: run google test
-      run: .\MFCApplication1\x64\Release\MyGoogleTest1.exe --gtest_output=xml:MyTestResult001.xml
+      run: .\MFCApplication1\x64\Release\MyGoogleTest1.exe --gtest_output=xml:C:\\Users\\Modi\\MyTestResult001.xml

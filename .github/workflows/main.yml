@@ -9,8 +9,12 @@ jobs:
       PATH: "${env:PATH};C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin"
       
     steps:
+    - name: Add Git to PATH
+      shell: pwsh
+      run: echo "::add-path::$(Get-Command git.exe | Select-Object -ExpandProperty Path)"
+      
     - uses: actions/checkout@v2
-    
+      
     - name: Check Path
       run: echo $env:PATH
       

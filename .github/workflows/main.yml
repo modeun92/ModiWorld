@@ -11,14 +11,8 @@ jobs:
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1
     
-    - name: Setup NuGet.exe for use with actions
-      uses: NuGet/setup-nuget@v1.1.1
-      
     - name: msbuild version check
       run: msbuild --version
-      
-    - name: nuget version check
-      run: nuget help
     
     - name: run msbuild
       run: msbuild .\MFCApplication1\MFCApplication1.sln /property:Configuration=Release /property:Platform=x64

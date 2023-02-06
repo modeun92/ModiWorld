@@ -1,0 +1,7 @@
+
+*.db-wal
+*.db-shm
+*.db
+*.vsidx
+*.opendb
+*.vsidx

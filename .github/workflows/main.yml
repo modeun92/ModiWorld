@@ -21,7 +21,7 @@ jobs:
       run: .\MFCApplication1\x64\Release\MyGoogleTest1.exe --gtest_output=xml:MyTestResult001.xml
       
     - name: upload google test file
-      uses: actions/upload-artiface@v1
+      uses: actions/upload-artifact@v1
       with:
         name: MyTestResult001
         path: MyTestResult001.xml
